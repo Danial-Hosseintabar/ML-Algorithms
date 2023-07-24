@@ -11,6 +11,12 @@
             <div class="grid-container">
                 <div class="grid-child">
                     <canvas width="300px" height="300px" class="canvas"></canvas>
+                    <div>
+                        <div>Iteration Count</div><input type="range" id="iterationRangeInput"
+                            onmousemove="updateIteration();" onmouseleave="updatingRange = false ;updateIteration()"
+                            onmouseenter="updatingRange = true;" />
+                        <div id="iterationRangeText"></div>
+                    </div>
                 </div>
                 <div class="grid-child">
                     <div id="result"></div>

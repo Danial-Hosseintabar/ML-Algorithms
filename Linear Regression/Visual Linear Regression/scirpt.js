@@ -24,6 +24,14 @@ function addDataToPanelDiv(x, y) {
     document.getElementById("YValuesTable").innerHTML += "<br/>" + y;
 }
 
+updatingRange = true;
+
+function updateIteration() {
+    if (!updatingRange)
+        document.getElementById("iterationRangeText").innerHTML = "";
+    else document.getElementById("iterationRangeText").innerHTML = Number(document.getElementById("iterationRangeInput").value) * 10000;
+}
+
 function reset() {
     data_x = [];
     data_y = [];
@@ -42,14 +50,16 @@ function init() {
 }
 
 function gradient_descent() {
+    th = [0, 0];
     let alpha = 0.00001;
     for (let i = 0; i < data_x.length; i++) {
         console.log(data_x[i]);
         console.log(data_y[i]);
     }
+    let iterationCount = Number(document.getElementById("iterationRangeInput").value * 10000);
     th = [0, 0];
     let sum = [0.0, 0.0];
-    for (let i = 0; i < 1000000; i++) {
+    for (let i = 0; i < iterationCount; i++) {
         sum = [0.0, 0.0];
         for (let k = 0; k < data_x.length; k++) {
             sum[0] += (-data_y[k] + (th[0] + th[1] * data_x[k]));
