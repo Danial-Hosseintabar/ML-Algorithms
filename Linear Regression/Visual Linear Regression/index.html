@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Linear regression visualizer</title>
+    </head>
+
+    <body>
+        <div class="mainDiv">
+            <button onclick="gradient_descent()">Find the best line</button>
+            <div class="grid-container">
+                <div class="grid-child">
+                    <canvas width="300px" height="300px" class="canvas"></canvas>
+                </div>
+                <div class="grid-child">
+                    <div id="result">test </div>
+                    <div id="XValuesTable" class="DataTable">X Values :</div>
+                </div>
+                <div class="grid-child">
+                    <div id="YValuesTable" class="DataTable">Y values :</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="scirpt.js" onload="init();">
+    </script>
+
+</html>

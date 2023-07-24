@@ -1,0 +1,31 @@
+.mainDiv {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(191, 188, 188);
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.DataTable {
+    position: absolute;
+    top: 100px;
+    background-color: rgb(191, 188, 188);
+    text-align: left;
+}
+
+.canvas {
+    background-color: white;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    grid-gap: 20px;
+}
