@@ -24,6 +24,17 @@ function addDataToPanelDiv(x, y) {
     document.getElementById("YValuesTable").innerHTML += "<br/>" + y;
 }
 
+function reset() {
+    data_x = [];
+    data_y = [];
+    th = [0, 0];
+    canvas.setAttribute("width", "" + canvas.getBoundingClientRect().width + "px");
+    canvas.setAttribute("height", "" + canvas.getBoundingClientRect().height + "px");
+    document.getElementById("XValuesTable").innerHTML = "X Values :";
+    document.getElementById("YValuesTable").innerHTML = "Y Values :";
+    document.getElementById("result").innerHTML = "";
+}
+
 function init() {
     canvas.addEventListener("mousedown", drawPoint);
     canvas.setAttribute("width", "" + canvas.getBoundingClientRect().width + "px");
