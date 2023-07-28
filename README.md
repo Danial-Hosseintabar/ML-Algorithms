@@ -23,10 +23,27 @@ This time we are trying to solve a classification problem. A very nice example f
 Based on this datas we will be able to predict the chance that a tumor is malignant.
 This time we are trying to fit a sigmoid funtion that describes the datas the best. (In Mathematical terms: has the maximum likelihood)
 $$h(X) = \frac{1}{1-e^{-\Theta^T X}}$$
+What this function is doing is actually drawing a linear function between datas with value 1 and 0 and can use it to predict new input datas.
 
-## Gradient ascsent
-The logic is excatly like gradient descent, but this time we are trying to reach the maximum. Overally simple, but slow algorithm.
+As an example I gave the code a 2D example of tumor malignancy prediction:
+Lets assume the X axis demonstrates of tumor and the Y axis is showing tumor's weight.
+Red Dots show malignant tumors and blue ones are showing non-malignant tumors.
 
-## Newton's method
-This method converges really fast, but each iteration is expensive because it includes inversing the hessian matrix and multiplying matrices.
+![Tumor Malignancy Datas](https://github.com/Danial-Hosseintabar/ML-Algorithms/blob/main/Documents/images/LogisticRegression1.JPG)
+
+Let's give the datas to the code.
+
+![Logistic Regression Code Output](https://github.com/Danial-Hosseintabar/ML-Algorithms/blob/main/Documents/images/logisticRegression0.JPG)
+
+As we can see it successfully finds the parameters and the prediction values for given data are pretty satisfying.
+The line which the algorithm drew between the malignant and non-malignant datas is shown below:
+
+![Logistic Regression Drawn Line](https://github.com/Danial-Hosseintabar/ML-Algorithms/blob/main/Documents/images/LogisticRegression2.JPG)
+
+Two popular numberical methods for maximizing the likelihood are:
+### Gradient ascsent
+The logic is excatly like gradient descent, but this time we are trying to reach the maximum. Overally, it is a simple algorithm, but very slow.
+
+### Newton's method
+This method converges really fast, albeit each iteration is too expensive because it includes calculating the hessian matrix and inverting it along with multiplying matrices.
 
