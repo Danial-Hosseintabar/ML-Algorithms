@@ -13,10 +13,10 @@ int main(){
 	double th[n+1] ;
 
 
-	double alpha ;
+	double learning_rate ;
 	double iteration_count ;
 	cout << "\n# Enter alpha : " ;
-	cin >> alpha ;
+	cin >> learning_rate ;
 	cout << "# Enter iteration count : " ;
 	cin >> iteration_count ;
 
@@ -50,7 +50,7 @@ int main(){
 				}
 			}
 
-			for(int i = 0 ; i <= n ; i++) th[i] -= alpha * sum[i] ;
+			for(int i = 0 ; i <= n ; i++) th[i] -= learning_rate * sum[i] ;
 		}
 	}
 
