@@ -18,7 +18,8 @@ A C++ program which will find the closest linear function which has the conditio
 
 ![General Linear Regression](https://github.com/Danial-Hosseintabar/ML-Algorithms/blob/main/Documents/images/GeneralLinearRegression.JPG)
 
-# Logistic Regression
+# Classification Problems
+## Logistic Regression
 This time we are trying to solve a classification problem. A very nice example for this which was mentioned in CS229 Stanford class by Andrew NG is the breast cancer tumor problem. There are several features for a tumor and you have a set of datas with binary out put (the tumor is either malignant or it is not).
 Based on this datas we will be able to predict the chance that a tumor is malignant.
 This time we are trying to fit a sigmoid funtion that describes the datas the best. (In Mathematical terms: has the maximum likelihood)
@@ -47,3 +48,8 @@ The logic is excatly like gradient descent, but this time we are trying to reach
 ### Newton's method
 This method converges really fast, albeit each iteration is too expensive because it includes calculating the hessian matrix and inverting it along with multiplying matrices.
 
+## Perceptron Learning Algorithm
+In 1960s this algorithm was believed to be the way our brains actually work. It is simple but there is no probabilistic interpretations behind it, so not the best algorithm.
+Image below shows the 100 datas, which could be exactly divided by some straight line, I gave to [perceptron_learning_algorithm.py](https://github.com/Danial-Hosseintabar/ML-Algorithms/blob/main/Perceptron%20Learning/perceptron_learning_algorithm.py) and the seperating line it found.
+
+![Perceptron Learning Algorithm](Documents/images/PerceptronLearningAlgorithm.JPG)
