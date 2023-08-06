@@ -38,15 +38,18 @@ int main(){
 
 	{
 		double sum[n+1] ;
-		double poly ;
+		double poly[m] ;
 		for(int k = 0 ; k < iteration_count ; k++){
 			
+			for(int j = 0 ; j < m ; j++){
+				poly[j] = 0 ;
+				for(int t = 0 ; t <= n ; t++)
+					poly[j] += th[t] * X[j][t] ;
+			}
 			for(int i = 0 ; i <= n ; i++){
 				sum[i] = 0 ;
 				for(int j = 0 ; j < m ; j++){
-					poly = 0 ;
-					for(int k = 0 ; k <= n ; k++) poly += th[k] * X[j][k] ;
-					sum[i] += ( poly - Y[j] ) * X[j][i] ;
+					sum[i] += ( poly[j] - Y[j] ) * X[j][i] ;
 				}
 			}
 
