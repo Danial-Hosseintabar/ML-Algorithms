@@ -1,7 +1,7 @@
 # Introduction
-I'm implementing some Machine Learning Algorithms in form of little tools in this repository, some have graphics as well.
-Graphical tools are mostly implemented using `Javascript`, `CSS`, `HTML`.
-Non-Graphical tools are mostly implemented in `C++` and `Python`.
+I'm implementing Machine Learning Algorithms.
+Very first ones that I codded were implemented in `C++` and one of them which was a visualization on linear regression is written in `Javascript`, `CSS` and `HTML` and has some interactive graphics.
+Rest of them are written in python.
 
 # Linear Regression
 We are trying to fit a linear function (called hypothesis in Machine Learning) which describes our datas the best. This function is defined as:
@@ -20,7 +20,7 @@ A C++ program which will find the closest linear function which has the conditio
 
 # Classification Problems
 ## Logistic Regression
-This time we are trying to solve a classification problem. A very nice example for this which was mentioned in CS229 Stanford class by Andrew NG is the breast cancer tumor problem. There are several features for a tumor and you have a set of datas with binary out put (the tumor is either malignant or it is not).
+This time we are trying to solve a classification problem. A very nice example for this is the breast cancer tumor problem. There are several features for a tumor and you have a set of datas with binary out put (the tumor is either malignant or it is not).
 Based on this datas we will be able to predict the chance that a tumor is malignant.
 This time we are trying to fit a sigmoid funtion that describes the datas the best. (In Mathematical terms: has the maximum likelihood)
 $$h(X) = \frac{1}{1-e^{-\Theta^T X}}$$
